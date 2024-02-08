@@ -11,3 +11,19 @@ navToggle.addEventListener('click', () => {
 
   console.log("Pulsando el boton")
 });
+
+
+
+// Modo noche
+
+const noche = document.getElementById('noche');
+const botonNoche = document.getElementById('botonNoche');
+let isNoche = false;
+
+botonNoche.addEventListener('click', (e) => {
+        noche.classList.toggle('dark')
+        isNoche = !isNoche;
+
+        if (isNoche) botonNoche.innerHTML = `<i class="uil uil-brightness text-2xl hover:text-[F65938] transition"></i>`
+        else botonNoche.innerHTML = `<i class="uil uil-moon text-2xl hover:text-[F65938] transition"></i>`
+})
